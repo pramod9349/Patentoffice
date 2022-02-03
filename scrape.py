@@ -10,12 +10,12 @@ def find(text, element):
         return ''
 
 
-def scrape(linkis):
+def scrape(wipono):
     session = HTMLSession()
     headers = {
         "User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36 OPR/67.0.3575.137"}
     data = {}
-    status_url = f'https://patentscope.wipo.int/search/en/detail.jsf?docId={linkis}&_cid=P11-KQ6CCK-39257-2'
+    status_url = f'https://patentscope.wipo.int/search/en/detail.jsf?docId={wipono}&_cid=P11-KQ6CCK-39257-2'
     # FETCHING STATUS RELEATED DETAILS
     html = html.html
     data['publicationNumber'] = ''
@@ -108,8 +108,7 @@ print("Agents name is")
 print(Agents)
 print("Prioriy data is")
 print(Priority_Data)
-
-    return data
+return data
 
 
 if __name__ == '__main__':
